@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Apuntamos al nuevo endpoint y al servidor local
-            const response = await fetch('https://analizador-backend-2ubi.onrender.com/analyze', {
+            const response = await fetch('https://analizador-backend-2ubi.onrender.com/api/analyze', {
                 method: 'POST',
                 body: formData,
             });
