@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de Superficie 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Analizador de Superficie</h1>
+            <p>Sube una imagen de tu pieza para resaltar imperfecciones, fisuras o desniveles.</p>
+        </header>
+
+        <div class="comparison-area">
+            <div class="image-uploader">
+                <label for="image-input" class="upload-label">
+                    <img src="" alt="Vista previa de la Imagen" class="image-preview" id="preview1">
+                    <div class="upload-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        <span>Seleccionar Imagen</span>
+                    </div>
+                </label>
+                <input type="file" id="image-input" accept="image/*" hidden>
+            </div>
+        </div>
+
+        <button id="analyze-btn" class="compare-button">Analizar Superficie</button>
+
+        <div id="results-area" class="results-section" hidden>
+            <h2>Resultados del Análisis</h2>
+            <div class="result-content">
+                <div class="result-image-container">
+                    <h3>Mapa de Imperfecciones</h3>
+                    <img id="analysis-image" src="" alt="Imagen con imperfecciones resaltadas">
+                </div>
+            </div>
+        </div>
+        
+        <div id="loader" class="loader" hidden></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
